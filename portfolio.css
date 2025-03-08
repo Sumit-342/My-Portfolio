@@ -280,9 +280,11 @@ span {
 .heading-about {
   font-size: 6rem;
   text-align: left;
+  
 }
 .about-content {
   padding: 0 4rem;
+  
 }
 .about-content h2 {
   text-align: left;
@@ -290,7 +292,9 @@ span {
 }
 .about-content h3 {
   font-size: 3rem;
-}
+  white-space: nowrap;
+   /* margin-top: -10px; */
+} 
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
@@ -1130,3 +1134,74 @@ margin: 1.5rem 0 2.5rem;
   }
 }
 
+
+/* About section responsive code  */
+    
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: left; /* Left-align text */
+    gap: 3rem; /* Add more space between image and text */
+    
+    /* padding-bottom: 3rem ;  */
+  }
+  
+  .about-img {
+    order: -1; 
+    display: flex;
+    justify-content: center;
+  }
+  .about-img img {
+    width: 50vw; /* Increase image size for smaller screens */
+  }
+
+  .heading-about {
+    text-align: left; /* Left-align the heading */
+    font-size: 5rem; /* Reduce font size for smaller screens */
+    margin-left: 2rem; /* Add some left margin for alignment */
+  }
+
+  .about-content {
+    padding: 0 2rem; /* Reduce padding for smaller screens */
+    text-align: left; /* Left-align all text */
+    margin-left: 2rem; /* Add some left margin for alignment */
+  }
+
+  .about-content h2,
+  .about-content h3,
+  p
+   {
+    text-align: left; /* Left-align all text */
+    width: 100%; /* Ensure full width for text */
+  }
+  
+  .about-content h3 {
+    font-size: 2.5rem; /* Reduce font size for smaller screens */
+    margin-top: 1rem; /* Add some space between h2 and h3 */
+  }
+
+  .about-content p {
+    font-size: 1.4rem; /* Reduce font size for smaller screens */
+    margin-top: 1rem; /* Add some space between h3 and p */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .about-img img {
+    width: 70vw; /* Further increase image size for mobile */
+  }
+
+  .heading-about {
+    font-size: 4rem; /* Further reduce font size for mobile */
+    margin-left: 1rem; /* Adjust left margin for mobile */
+  }
+
+  .about-content h3 {
+    font-size: 2rem; /* Further reduce font size for mobile */
+  }
+
+  .about-content p {
+    font-size: 1.2rem; /* Further reduce font size for mobile */
+  }
+}
