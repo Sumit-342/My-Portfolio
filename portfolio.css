@@ -792,18 +792,26 @@ span {
   padding: 1rem;
   box-sizing: border-box; /* Prevent overflow */
 }
-
+  .main-heading{
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
 .contact-box {
   width: 100%; /* Ensure the box takes full width */
   max-width: 100%; /* Prevent overflow */
   padding: 1.5rem; /* Adjust padding */
   box-sizing: border-box; /* Include padding in width calculation */
   margin: 0 auto; /* Center the box */
+ 
 }
 
 .contact-box h2 {
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 .contact-box p {
@@ -1297,6 +1305,18 @@ span {
   .contact-box .bton {
     font-size: 1.5rem; /* Reduce button font size */
     width: 100%; /* Make button full width */
+  }
+  .main-heading{
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+    white-space: nowrap;
+  }
+}
+@media(max-width:480px){
+  .main-heading{
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
   }
 }
 /* footer section code */
