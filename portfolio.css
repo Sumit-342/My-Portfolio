@@ -148,8 +148,15 @@ section {
   cursor: pointer;
   display: none;
 }
-
-
+#close-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+  display: none;
+}
 
 /* Home Section code */
 
@@ -1088,26 +1095,39 @@ span {
 
   #menu-icon {
     display: block;
+  
+   
   }
 
   .navbar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    background: var(--bg-color);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+   min-height: 100vh;
+    background: var(--main-color);
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    display: none;
-    padding: 0.5rem 0;
+    justify-content: flex-start;
+    gap: 20px;
+    transition: right 0.5s ease-in-out;
+    padding-top: 80px;
   }
-
+    #close-icon{
+      display: block;
+    }
   .navbar a {
     margin-left: 0;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
-
+  .navbar.active {
+    display: flex;
+    right : 0;
+  }
+  .navbar.active ~ #menu-icon{
+    display: none;
+  }
   /* Fix text breaking issue */
   .home-content h1 {
     font-size: 4.5rem;

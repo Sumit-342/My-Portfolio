@@ -1,3 +1,39 @@
+//Menu icon working code
+
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let CloseIcon = document.querySelector('#close-icon');
+
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+
+}
+
+CloseIcon.onclick = () =>{
+    navbar.classList.remove('active')
+}
+
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
+}
+
+// Typing Effect code 
+
+
+const typed = new Typed('.multiple-text', {
+    strings: ['a Fronted Developer', 'a Web Developer','Passionate About Clean Code'],
+    typeSpeed: 80,
+    backSpeed:80,
+    backDelay:1200,
+    loop:true,
+  });
+
+ 
+
 // navbar underline effect code//
 
 const navLinks = document.querySelectorAll('.navbar a');
